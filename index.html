@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>野球も、勉強も、あきらめない子に。｜現役医学部生による中学受験指導</title>
+<title>スポーツも、勉強も、あきらめない子に。｜現役医学部生による中学受験指導</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -290,7 +290,9 @@ header {
   right: 0;
   width: 320px;
   height: 420px;
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  background-image: url('images/portrait.jpg');
+  background-size: cover;
+  background-position: center top;
 }
 
 .hero-photo-2 {
@@ -298,7 +300,9 @@ header {
   left: 0;
   width: 240px;
   height: 280px;
-  background: linear-gradient(160deg, var(--burgundy) 0%, #4a1620 100%);
+  background-image: url('images/baseball.jpg');
+  background-size: cover;
+  background-position: center;
   z-index: 2;
 }
 
@@ -317,9 +321,7 @@ header {
 }
 
 .photo-label {
-  padding: 16px;
-  opacity: 0.7;
-  line-height: 1.5;
+  display: none;
 }
 
 /* ==================== セクション共通 ==================== */
@@ -431,25 +433,11 @@ section {
 .profile-photo {
   width: 320px;
   height: 420px;
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--cream);
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  letter-spacing: 0.1em;
+  background-image: url('images/portrait.jpg');
+  background-size: cover;
+  background-position: center top;
   position: relative;
-}
-
-.profile-photo::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  border: 1px solid rgba(245, 240, 232, 0.2);
+  font-size: 0;
 }
 
 .profile-name {
@@ -1001,7 +989,7 @@ footer .latin {
 <header>
   <div class="logo">
     家庭教師 川井
-    <small>Private Tutor — for Sapient Athletes</small>
+    <small>Private Tutor — for Student-Athletes</small>
   </div>
   <a href="#contact" class="cta-header">体験授業のご相談</a>
 </header>
@@ -1012,12 +1000,12 @@ footer .latin {
     <div>
       <div class="hero-eyebrow">A Private Tutor for Junior High Exams</div>
       <h1>
-        野球も、勉強も、<br>
+        スポーツも、勉強も、<br>
         <span class="accent">あきらめない子</span>に。
       </h1>
       <p class="hero-lead">
-        SAPIXに通いながら、早稲田中学に現役合格。<br>
-        中高6年弱、硬式野球部。<br>
+        SAPIXに通い、早稲田中学に現役合格。<br>
+        中高で約5年、硬式野球部。<br>
         そして今、現役医学部生として教壇に立っています。<br>
         <br>
         「勉強漬けにはしたくない、でも合格はさせたい」<br>
@@ -1112,16 +1100,14 @@ footer .latin {
     <h2 class="section-title">「両立」を、<br>自分の人生で証明してきました。</h2>
 
     <div class="profile-grid">
-      <div class="profile-photo">
-        [ Profile Photo ]
-      </div>
+      <div class="profile-photo"></div>
 
       <div>
-        <div class="profile-name">川井 ◯◯</div>
-        <div class="profile-name-en">Kawai ◯◯ — M.D. Candidate, Class of 20XX</div>
+        <div class="profile-name"><ruby>川井 康聖<rt>かわい こうせい</rt></ruby></div>
+        <div class="profile-name-en">Kawai Kosei — M.D. Candidate, Class of 2028</div>
 
         <p class="profile-quote">
-          「中学受験の勉強と野球を両立させた経験は、<br>
+          「中高の6年間、勉強と野球を両立させてきた経験は、<br>
           今、医学部で学びながら野球部を続けるうえで、<br>
           まちがいなく自分の支えになっています。」
         </p>
@@ -1232,7 +1218,7 @@ footer .latin {
         </div>
         <ul class="price-features">
           <li>SAPIX/日能研テキスト対応可</li>
-          <li>使用ツール：Zoom + iPadホワイトボード</li>
+          <li>使用ツール：Google Meet + iPadホワイトボード</li>
           <li>毎週固定枠でのご予約を推奨</li>
           <li>テスト前は時間延長のご相談も可</li>
         </ul>
@@ -1281,7 +1267,7 @@ footer .latin {
       </div>
       <div class="faq-item">
         <div class="faq-q">対面での指導はしていますか？</div>
-        <div class="faq-a">原則オンラインのみ承っています。Zoomと iPadホワイトボードを併用し、対面と遜色ない指導を実現しています。地理的制約がないため、全国どちらのご家庭にも対応可能です。</div>
+        <div class="faq-a">原則オンラインのみ承っています。Google MeetとiPadホワイトボードを併用し、対面と遜色ない指導を実現しています。アプリのインストールが不要で、URLを送るだけでブラウザからご参加いただけます。地理的制約がないため、全国どちらのご家庭にも対応可能です。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">SAPIX以外の塾に通っていても大丈夫ですか？</div>
@@ -1312,7 +1298,7 @@ footer .latin {
 </section>
 
 <footer>
-  <div class="latin">— for Sapient Athletes —</div>
+  <div class="latin">— for Student-Athletes —</div>
   <div>© 2026 Private Tutor Kawai. All rights reserved.</div>
 </footer>
 
