@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>野球も、勉強も、あきらめない子に。｜現役医学部生による中学受験指導</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a2944;
+  --navy-deep: #0f1a2e;
+  --burgundy: #6b1f2e;
+  --burgundy-light: #8b3041;
+  --cream: #f5f0e8;
+  --cream-warm: #ebe3d5;
+  --paper: #faf7f1;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --gold: #b8924a;
+  --line: rgba(26, 41, 68, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 400;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.85;
+  font-feature-settings: "palt";
+  letter-spacing: 0.02em;
+}
+
+.serif {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.latin {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+/* ==================== ヘッダー ==================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 18px 40px;
+  background: rgba(250, 247, 241, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+}
+
+.logo small {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--burgundy);
+  margin-top: 2px;
+  letter-spacing: 0.1em;
+}
+
+.cta-header {
+  font-size: 13px;
+  padding: 10px 22px;
+  background: var(--burgundy);
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.cta-header:hover {
+  background: var(--burgundy-light);
+}
+
+/* ==================== ヒーロー ==================== */
+.hero {
+  min-height: 100vh;
+  padding: 140px 40px 80px;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--cream-warm) 0%, transparent 70%);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.hero-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--burgundy);
+  font-size: 18px;
+  margin-bottom: 30px;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: var(--burgundy);
+}
+
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5.5vw, 68px);
+  line-height: 1.35;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  margin-bottom: 36px;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero h1 .accent {
+  color: var(--burgundy);
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1 .accent::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--gold);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.hero-lead {
+  font-size: 17px;
+  line-height: 2;
+  color: var(--ink-soft);
+  margin-bottom: 48px;
+  max-width: 520px;
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.hero-credentials {
+  display: flex;
+  gap: 0;
+  margin-bottom: 48px;
+  border-left: 2px solid var(--burgundy);
+  padding-left: 24px;
+  animation: fadeInUp 0.8s ease 0.7s both;
+}
+
+.cred-item {
+  padding-right: 28px;
+  border-right: 1px solid var(--line);
+  margin-right: 28px;
+}
+
+.cred-item:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+.cred-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--burgundy);
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
+
+.cred-value {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 44px;
+  background: var(--navy);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+  animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.hero-cta:hover {
+  background: var(--burgundy);
+  transform: translateY(-2px);
+}
+
+.hero-cta::after {
+  content: "→";
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+
+.hero-cta-sub {
+  display: block;
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.1em;
+  animation: fadeInUp 0.8s ease 0.9s both;
+}
+
+/* ヒーロー右側の画像エリア */
+.hero-visual {
+  position: relative;
+  height: 580px;
+  animation: fadeIn 1.2s ease 0.6s both;
+}
+
+.hero-photo-1, .hero-photo-2, .hero-photo-3 {
+  position: absolute;
+  background: var(--navy);
+  box-shadow: 0 30px 60px rgba(26, 41, 68, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.hero-photo-1 {
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 420px;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+
+.hero-photo-2 {
+  bottom: 0;
+  left: 0;
+  width: 240px;
+  height: 280px;
+  background: linear-gradient(160deg, var(--burgundy) 0%, #4a1620 100%);
+  z-index: 2;
+}
+
+.hero-photo-3 {
+  top: 40%;
+  right: 60%;
+  width: 140px;
+  height: 140px;
+  background: var(--cream-warm);
+  color: var(--burgundy);
+  z-index: 3;
+  border: 1px solid var(--burgundy);
+  font-family: 'Noto Serif JP', serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.photo-label {
+  padding: 16px;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+/* ==================== セクション共通 ==================== */
+section {
+  padding: 120px 40px;
+  position: relative;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--burgundy);
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--burgundy);
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.5;
+  color: var(--navy);
+  margin-bottom: 60px;
+  letter-spacing: 0.02em;
+}
+
+/* ==================== こんなご家庭へ ==================== */
+.target {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.target-intro {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  line-height: 1.9;
+  color: var(--navy);
+  margin-bottom: 80px;
+  font-weight: 500;
+  max-width: 800px;
+}
+
+.target-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.target-list li {
+  padding: 36px 32px 36px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.target-list li:nth-child(odd) {
+  padding-right: 48px;
+  border-right: 1px solid var(--line);
+}
+
+.target-list li:nth-child(even) {
+  padding-left: 32px;
+}
+
+.target-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 32px;
+  color: var(--burgundy);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ==================== プロフィール ==================== */
+.profile {
+  background: var(--paper);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 320px;
+  height: 420px;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+.profile-photo::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid rgba(245, 240, 232, 0.2);
+}
+
+.profile-name {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.profile-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--burgundy);
+  font-size: 18px;
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
+}
+
+.profile-quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 19px;
+  line-height: 2;
+  color: var(--ink);
+  padding: 24px 0 24px 28px;
+  border-left: 3px solid var(--burgundy);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* タイムライン */
+.timeline {
+  margin-top: 32px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--line);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 32px;
+  padding: 16px 0;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 96px;
+  top: 28px;
+  width: 9px;
+  height: 9px;
+  background: var(--paper);
+  border: 2px solid var(--burgundy);
+  border-radius: 50%;
+}
+
+.timeline-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--burgundy);
+  font-size: 17px;
+  font-weight: 600;
+  padding-top: 18px;
+}
+
+.timeline-content {
+  padding-top: 16px;
+}
+
+.timeline-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+/* ==================== 指導方針 ==================== */
+.philosophy {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 140px 40px;
+}
+
+.philosophy .section-eyebrow {
+  color: var(--gold);
+}
+
+.philosophy .section-eyebrow::before {
+  background: var(--gold);
+}
+
+.philosophy .section-title {
+  color: var(--cream);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 40px;
+}
+
+.philosophy-item {
+  padding: 40px 36px 40px 0;
+  border-right: 1px solid rgba(245, 240, 232, 0.15);
+}
+
+.philosophy-item:nth-child(2) {
+  padding-left: 36px;
+}
+
+.philosophy-item:nth-child(3) {
+  padding-left: 36px;
+  border-right: none;
+}
+
+.philosophy-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 60px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.philosophy-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+}
+
+.philosophy-desc {
+  font-size: 15px;
+  line-height: 2;
+  color: rgba(245, 240, 232, 0.8);
+}
+
+/* ==================== 料金 ==================== */
+.pricing {
+  background: var(--paper);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.price-card {
+  border: 1px solid var(--line);
+  padding: 48px 40px;
+  background: var(--paper);
+  position: relative;
+}
+
+.price-card.featured {
+  background: var(--cream);
+  border: 1px solid var(--burgundy);
+}
+
+.price-badge {
+  position: absolute;
+  top: -12px;
+  left: 40px;
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 6px 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.price-name {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.price-target {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+.price-amount {
+  font-family: 'Noto Serif JP', serif;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.price-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.price-unit {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-left: 4px;
+}
+
+.price-features {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.price-features li {
+  padding: 10px 0;
+  padding-left: 24px;
+  position: relative;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.price-features li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+/* ==================== 流れ ==================== */
+.flow {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+
+.flow-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  counter-reset: flow-counter;
+}
+
+.flow-item {
+  padding: 40px 24px 40px 0;
+  border-right: 1px solid var(--line);
+  position: relative;
+  counter-increment: flow-counter;
+}
+
+.flow-item:last-child {
+  border-right: none;
+}
+
+.flow-item:nth-child(n+2) {
+  padding-left: 24px;
+}
+
+.flow-item::before {
+  content: counter(flow-counter, decimal-leading-zero);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 48px;
+  color: var(--burgundy);
+  line-height: 1;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.flow-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.flow-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+/* ==================== FAQ ==================== */
+.faq {
+  background: var(--paper);
+}
+
+.faq-list {
+  margin-top: 40px;
+}
+
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-q {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.faq-q::before {
+  content: "Q.";
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--burgundy);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.faq-a {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  padding-left: 36px;
+}
+
+/* ==================== 最終CTA ==================== */
+.final-cta {
+  background: var(--burgundy);
+  color: var(--cream);
+  text-align: center;
+  padding: 120px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(184, 146, 74, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(245, 240, 232, 0.08) 0%, transparent 50%);
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.final-cta p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 48px;
+  opacity: 0.9;
+}
+
+.final-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 56px;
+  background: var(--cream);
+  color: var(--burgundy);
+  text-decoration: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+}
+
+.final-cta-button:hover {
+  background: var(--gold);
+  color: var(--cream);
+}
+
+.final-cta-button::after {
+  content: "→";
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+}
+
+/* ==================== フッター ==================== */
+footer {
+  background: var(--navy-deep);
+  color: var(--cream);
+  padding: 50px 40px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+footer .latin {
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* ==================== アニメーション ==================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==================== レスポンシブ ==================== */
+@media (max-width: 900px) {
+  header {
+    padding: 14px 20px;
+  }
+
+  .cta-header {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  section, .hero {
+    padding: 80px 20px;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-grid,
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-visual {
+    height: 380px;
+  }
+
+  .hero-photo-1 {
+    width: 220px;
+    height: 280px;
+  }
+
+  .hero-photo-2 {
+    width: 160px;
+    height: 180px;
+  }
+
+  .hero-photo-3 {
+    width: 100px;
+    height: 100px;
+    right: 50%;
+  }
+
+  .target-list {
+    grid-template-columns: 1fr;
+  }
+
+  .target-list li:nth-child(odd) {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .target-list li:nth-child(even) {
+    padding-left: 0;
+  }
+
+  .philosophy-grid,
+  .pricing-grid,
+  .flow-list {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-item,
+  .flow-item {
+    padding: 32px 0 !important;
+    border-right: none;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.15);
+  }
+
+  .flow-item {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-credentials {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .timeline::before {
+    left: 70px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 70px 1fr;
+    gap: 20px;
+  }
+
+  .timeline-item::before {
+    left: 66px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    家庭教師 川井
+    <small>Private Tutor — for Sapient Athletes</small>
+  </div>
+  <a href="#contact" class="cta-header">体験授業のご相談</a>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">A Private Tutor for Junior High Exams</div>
+      <h1>
+        野球も、勉強も、<br>
+        <span class="accent">あきらめない子</span>に。
+      </h1>
+      <p class="hero-lead">
+        SAPIXに通いながら、早稲田中学に現役合格。<br>
+        中高6年弱、硬式野球部。<br>
+        そして今、現役医学部生として教壇に立っています。<br>
+        <br>
+        「勉強漬けにはしたくない、でも合格はさせたい」<br>
+        そんなご家庭のための、もう一つの道。
+      </p>
+
+      <div class="hero-credentials">
+        <div class="cred-item">
+          <div class="cred-label">Elementary</div>
+          <div class="cred-value">SAPIX 小4〜</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-label">Junior & Senior High</div>
+          <div class="cred-value">早稲田中学・高等学校</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-label">University</div>
+          <div class="cred-value">国際医療福祉大学 医学部</div>
+        </div>
+      </div>
+
+      <a href="#contact" class="hero-cta">体験授業を申し込む</a>
+      <span class="hero-cta-sub">— 90分・オンライン・初回特別価格 3,000円</span>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-photo-1">
+        <div class="photo-label">
+          [ Portrait ]<br>
+          ここに講師の<br>
+          ポートレート写真
+        </div>
+      </div>
+      <div class="hero-photo-2">
+        <div class="photo-label">
+          [ Baseball ]<br>
+          ユニフォーム姿<br>
+          または部活風景
+        </div>
+      </div>
+      <div class="hero-photo-3">
+        現役<br>医学部生
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- こんなご家庭へ -->
+<section class="target">
+  <div class="section-inner">
+    <div class="section-eyebrow">Who is this for</div>
+    <h2 class="section-title">こんなご家庭の<br>力になれると思います。</h2>
+
+    <p class="target-intro">
+      点数を上げる家庭教師は、たくさんいます。<br>
+      私が向き合いたいのは、<strong>「両立」</strong>を諦めたくないご家庭です。
+    </p>
+
+    <ul class="target-list">
+      <li>
+        <span class="target-num">01</span>
+        <span>SAPIXや日能研に通っているが、子どもが疲弊しはじめている</span>
+      </li>
+      <li>
+        <span class="target-num">02</span>
+        <span>受験はしてほしいが、野球やサッカーをやめさせたくない</span>
+      </li>
+      <li>
+        <span class="target-num">03</span>
+        <span>「勉強だけ」の優等生ではなく、芯のある子に育ってほしい</span>
+      </li>
+      <li>
+        <span class="target-num">04</span>
+        <span>息子の扱いに迷っている。父親以外のロールモデルが欲しい</span>
+      </li>
+      <li>
+        <span class="target-num">05</span>
+        <span>将来は医学部や難関大学を視野に入れている</span>
+      </li>
+      <li>
+        <span class="target-num">06</span>
+        <span>大手塾の集団授業についていけない／質問できない</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- プロフィール -->
+<section class="profile">
+  <div class="section-inner">
+    <div class="section-eyebrow">About the Tutor</div>
+    <h2 class="section-title">「両立」を、<br>自分の人生で証明してきました。</h2>
+
+    <div class="profile-grid">
+      <div class="profile-photo">
+        [ Profile Photo ]
+      </div>
+
+      <div>
+        <div class="profile-name">川井 ◯◯</div>
+        <div class="profile-name-en">Kawai ◯◯ — M.D. Candidate, Class of 20XX</div>
+
+        <p class="profile-quote">
+          「中学受験の勉強と野球を両立させた経験は、<br>
+          今、医学部で学びながら野球部を続けるうえで、<br>
+          まちがいなく自分の支えになっています。」
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2010s</div>
+            <div class="timeline-content">
+              <div class="timeline-title">SAPIX 小学4年生から通塾</div>
+              <div class="timeline-desc">大手塾のカリキュラムを内側から知っている家庭教師です。</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">中学受験</div>
+            <div class="timeline-content">
+              <div class="timeline-title">早稲田中学校 現役合格</div>
+              <div class="timeline-desc">本郷の早稲田中・高等学校へ進学。</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">中1—高3.5</div>
+            <div class="timeline-content">
+              <div class="timeline-title">硬式野球部に所属、高3の5月で退部</div>
+              <div class="timeline-desc">指導者の方針と合わず、自分の判断で退部。約6年間の練習と勉強の両立で得た「時間の使い方」と、撤退すべき時に撤退する判断力は、いまも自分の財産です。</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">大学受験</div>
+            <div class="timeline-content">
+              <div class="timeline-title">国際医療福祉大学 医学部 現役合格</div>
+              <div class="timeline-desc">医学部医学科に現役で進学。</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Now</div>
+            <div class="timeline-content">
+              <div class="timeline-title">医学部5年生／硬式野球部所属</div>
+              <div class="timeline-desc">現在も野球部を続けながら、家庭教師として小学生〜高校生を指導。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 指導方針 -->
+<section class="philosophy">
+  <div class="section-inner">
+    <div class="section-eyebrow">Three Principles</div>
+    <h2 class="section-title">指導の三つの軸</h2>
+
+    <div class="philosophy-grid">
+      <div class="philosophy-item">
+        <div class="philosophy-num">01</div>
+        <h3 class="philosophy-title">時間で勝つ、<br>量で殴らない。</h3>
+        <p class="philosophy-desc">
+          部活と勉強を両立した経験から、限られた時間で成果を出す方法を教えます。「とにかくたくさん解く」ではなく、何を優先し何を捨てるかを一緒に決めます。
+        </p>
+      </div>
+      <div class="philosophy-item">
+        <div class="philosophy-num">02</div>
+        <h3 class="philosophy-title">塾の代わりではなく、<br>塾を活かす。</h3>
+        <p class="philosophy-desc">
+          SAPIXのテキストもカリキュラムも内側から知っています。塾を否定するのではなく、ご家庭で塾の効果を最大化する伴走者として関わります。
+        </p>
+      </div>
+      <div class="philosophy-item">
+        <div class="philosophy-num">03</div>
+        <h3 class="philosophy-title">「やらされる」を、<br>「やりたい」に。</h3>
+        <p class="philosophy-desc">
+          特に男の子は、納得しないと動きません。なぜ勉強するのか、その先に何があるのか。自分自身、高3の春に部活との向き合い方を見直して進路を選び直した経験があります。少し先を歩いている兄貴分として、本人が納得できる言葉で伝えます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 料金 -->
+<section class="pricing">
+  <div class="section-inner">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title">料金について</h2>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">体験授業</div>
+        <div class="price-target">初回限定／オンライン90分</div>
+        <div class="price-amount">
+          <span class="price-num">3,000</span>
+          <span class="price-unit">円／90分（通常6,000円の半額）</span>
+        </div>
+        <ul class="price-features">
+          <li>ご家庭の状況・お子さまの様子をヒアリング</li>
+          <li>簡単な学力チェックと、実際の指導</li>
+          <li>その場で指導プランをご提案</li>
+          <li>本当に必要だと感じた方にだけ、続けていただきます</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge">Standard</div>
+        <div class="price-name">レギュラー指導</div>
+        <div class="price-target">小4〜高3／オンライン90分</div>
+        <div class="price-amount">
+          <span class="price-num">6,000</span>
+          <span class="price-unit">円／90分（時給4,000円）</span>
+        </div>
+        <ul class="price-features">
+          <li>SAPIX/日能研テキスト対応可</li>
+          <li>使用ツール：Zoom + iPadホワイトボード</li>
+          <li>毎週固定枠でのご予約を推奨</li>
+          <li>テスト前は時間延長のご相談も可</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 流れ -->
+<section class="flow">
+  <div class="section-inner">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">指導開始までの流れ</h2>
+
+    <div class="flow-list">
+      <div class="flow-item">
+        <h3 class="flow-title">お問い合わせ</h3>
+        <p class="flow-desc">フォームよりご連絡ください。原則24時間以内にご返信します。</p>
+      </div>
+      <div class="flow-item">
+        <h3 class="flow-title">ヒアリング</h3>
+        <p class="flow-desc">保護者さまとオンラインで20〜30分。お子さまの状況を伺います。</p>
+      </div>
+      <div class="flow-item">
+        <h3 class="flow-title">体験授業</h3>
+        <p class="flow-desc">お子さまと90分。学力と相性をその場で確認します。半額の3,000円でご受講いただけます。</p>
+      </div>
+      <div class="flow-item">
+        <h3 class="flow-title">指導開始</h3>
+        <p class="flow-desc">体験後、ご家庭でご検討ください。決まれば曜日固定で開始します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner">
+    <div class="section-eyebrow">Frequently Asked Questions</div>
+    <h2 class="section-title">よくあるご質問</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">医学部受験の指導はお願いできますか？</div>
+        <div class="faq-a">はい、可能です。ただし現在のメインは中学受験指導のため、ご相談のうえお引き受けする形になります。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">対面での指導はしていますか？</div>
+        <div class="faq-a">原則オンラインのみ承っています。Zoomと iPadホワイトボードを併用し、対面と遜色ない指導を実現しています。地理的制約がないため、全国どちらのご家庭にも対応可能です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">SAPIX以外の塾に通っていても大丈夫ですか？</div>
+        <div class="faq-a">もちろんです。日能研、四谷大塚、早稲田アカデミーなど他塾のテキスト・カリキュラムにも対応します。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">女の子でも指導してもらえますか？</div>
+        <div class="faq-a">はい、お引き受けします。男の子の指導が多いのは事実ですが、性別を理由にお断りすることはありません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">兄弟での同時受講は可能ですか？</div>
+        <div class="faq-a">学年が近く、内容が共有可能な場合は同時受講もご相談に応じます。料金は別途ご相談ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 最終CTA -->
+<section class="final-cta" id="contact">
+  <div class="final-cta-content">
+    <h2>まずは、90分。<br>本気で向き合いませんか。</h2>
+    <p>
+      体験授業は3,000円（通常の半額）です。<br>
+      「本気で見てもらいたい」ご家庭にだけ、お越しいただいています。
+    </p>
+    <a href="#" class="final-cta-button">体験授業を申し込む</a>
+  </div>
+</section>
+
+<footer>
+  <div class="latin">— for Sapient Athletes —</div>
+  <div>© 2026 Private Tutor Kawai. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
